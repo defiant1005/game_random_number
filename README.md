@@ -1,4 +1,4 @@
-# ruletka
+# game_random_number
 
 ## Project setup
 ```
