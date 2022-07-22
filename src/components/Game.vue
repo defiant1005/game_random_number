@@ -29,6 +29,9 @@ export default defineComponent({
     const { win_num } = toRefs(props);
     const win_num_props:any = win_num;
 
+    const { is_end } = toRefs(props);
+    const is_end_props:any = is_end;
+
     const numbers:any = ref([]);
     let i = 1;
 
@@ -45,7 +48,9 @@ export default defineComponent({
     }
 
     const choice_num = (num: number) => {
-      context.emit('choice_num', num)
+      if (!is_end_props.value) {
+        context.emit('choice_num', num)
+      }
     };
     onMounted(() => {
       while (i < 101) {
