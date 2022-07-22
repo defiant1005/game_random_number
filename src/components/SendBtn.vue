@@ -36,4 +36,9 @@ export default defineComponent({
   font-size: 20px !important;
 }
 
+@media (max-width: 400px) {
+  .send__main-btn {
+    margin: 20px 0 0 0;
+  }
+}
 </style>

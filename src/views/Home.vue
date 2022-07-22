@@ -20,6 +20,7 @@ import {computed, defineComponent, onMounted, Ref, ref} from 'vue';
 import Game from "@/components/Game.vue";
 import SendBtn from "@/components/SendBtn.vue";
 import AgainBtn from "@/components/AgainBtn.vue";
+import { ElMessage } from 'element-plus'
 
 export default defineComponent({
   name: 'Home',
@@ -41,11 +42,19 @@ export default defineComponent({
 
     const send_main_handler = () => {
       if (choice_num_arr.value.length === 0) {
-        alert('ВЫбери цифру')
+        alert('Выбери цифру')
       } else if (choice_num_arr.value.includes(win_num.value)) {
-        alert('win')
+        ElMessage({
+          showClose: true,
+          message: 'Победа.',
+          type: 'success',
+        })
       } else {
-        alert('lose')
+        ElMessage({
+          showClose: true,
+          message: 'Ты проиграл.',
+          type: 'error',
+        })
       }
       is_end.value = true
     };
@@ -91,5 +100,10 @@ export default defineComponent({
   align-items: center;
   width: 100%;
   height: 100vh;
+}
+@media (max-width: 400px) {
+  .home__container {
+    flex-direction: column;
+  }
 }
 </style>

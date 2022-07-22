@@ -35,4 +35,9 @@ export default defineComponent({
 .again__main-btn:active {
   background: #e0002c;
 }
+@media (max-width: 400px) {
+  .again__main-btn {
+    margin: 0 0 20px 0;
+  }
+}
 </style>

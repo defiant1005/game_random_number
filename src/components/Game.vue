@@ -122,4 +122,24 @@ export default defineComponent({
 .end_win-num {
   background: #63e83f !important;
 }
+.end_win-num:hover {
+  background: #4bfd1a !important;
+}
+.end_win-num:active {
+  background: #28bd01 !important;
+}
+@media (max-width: 400px) {
+  .game__container {
+    width: 380px;
+    height: 380px;
+  }
+  .game__num-container {
+    width: 38px;
+    height: 38px;
+  }
+  .game__num-wrapper {
+    width: 38px;
+    height: 38px;
+  }
+}
 </style>
