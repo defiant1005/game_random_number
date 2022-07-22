@@ -1,5 +1,5 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
-        ? '/ruletka/'
+        ? '/game_random_number/'
         : '/'
 }
