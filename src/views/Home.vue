@@ -1,17 +1,19 @@
 <template>
   <div class="home__container">
-    <AgainBtn @click="again_game"/>
     <Game
         :is_end="is_end"
         :choice_num_arr="choice_num_arr"
         :win_num="win_num"
         @choice_num="choice_num"
     />
-    <SendBtn
-        :is_end="is_end"
-        :is_send_disabled="is_send_disabled"
-        @send_main="send_main_handler"
-    />
+    <div class="home__btn-container">
+      <SendBtn
+          :is_end="is_end"
+          :is_send_disabled="is_send_disabled"
+          @send_main="send_main_handler"
+      />
+      <AgainBtn @click="again_game"/>
+    </div>
   </div>
 </template>
 
@@ -101,9 +103,15 @@ export default defineComponent({
   width: 100%;
   height: 100vh;
 }
-@media (max-width: 400px) {
+.home__btn-container {
+  margin-left: 8px;
+}
+@media (max-width: 816px) {
   .home__container {
     flex-direction: column;
+  }
+  .home__btn-container {
+    margin-top: 20px;
   }
 }
 </style>

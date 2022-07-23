@@ -29,7 +29,6 @@ export default defineComponent({
 </script>
 <style>
 .send__main-btn {
-  margin-left: 20px !important;
   height: 50px !important;
   width: 200px !important;
   color: black !important;
@@ -38,7 +37,7 @@ export default defineComponent({
 
 @media (max-width: 400px) {
   .send__main-btn {
-    margin: 20px 0 0 0;
+    //margin: 20px 0 0 0;
   }
 }
 </style>

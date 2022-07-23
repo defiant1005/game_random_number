@@ -128,7 +128,36 @@ export default defineComponent({
 .end_win-num:active {
   background: #28bd01 !important;
 }
-@media (max-width: 400px) {
+
+@media (max-width: 620px) {
+  .game__container {
+    width: 500px;
+    height: 500px;
+  }
+  .game__num-container {
+    width: 50px;
+    height: 50px;
+  }
+  .game__num-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 520px) {
+  .game__container {
+    width: 400px;
+    height: 400px;
+  }
+  .game__num-container {
+    width: 40px;
+    height: 40px;
+  }
+  .game__num-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 420px) {
   .game__container {
     width: 380px;
     height: 380px;
@@ -140,6 +169,34 @@ export default defineComponent({
   .game__num-wrapper {
     width: 38px;
     height: 38px;
+  }
+}
+@media (max-width: 390px) {
+  .game__container {
+    width: 300px;
+    height: 300px;
+  }
+  .game__num-container {
+    width: 30px;
+    height: 30px;
+  }
+  .game__num-wrapper {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 310px) {
+  .game__container {
+    width: 250px;
+    height: 250px;
+  }
+  .game__num-container {
+    width: 25px;
+    height: 25px;
+  }
+  .game__num-wrapper {
+    width: 25px;
+    height: 25px;
   }
 }
 </style>

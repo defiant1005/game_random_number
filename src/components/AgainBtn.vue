@@ -1,6 +1,6 @@
 <template>
   <div class="again__container">
-    <button class="again__main-btn" @click="again_game">Заново</button>
+    <el-button class="again__main-btn" @click="again_game" type="danger">Заново</el-button>
   </div>
 </template>
 
@@ -21,13 +21,11 @@ export default defineComponent({
 </script>
 <style>
 .again__main-btn {
-  margin-right: 20px;
-  height: 50px;
-  width: 200px;
-  background: #ff6481;
-  color: black;
-  font-size: 20px;
-  border-radius: 8px;
+  margin-top: 20px !important;
+  height: 50px !important;
+  width: 200px !important;
+  color: black !important;
+  font-size: 20px !important;
 }
 .again__main-btn:hover {
   background: #ff395f;
