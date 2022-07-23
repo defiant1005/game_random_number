@@ -67,14 +67,24 @@ export default defineComponent({
 
     const again_game = () => {
       let random = Date.now().toString()
-      win_num.value = +random.slice(random.length - 2)
+      let number_random = +random.slice(random.length - 2)
+      if (number_random === 0) {
+        win_num.value = 100
+      } else {
+        win_num.value = number_random
+      }
       choice_num_arr.value = []
       is_end.value = false
     };
 
     onMounted(() => {
       let random = Date.now().toString()
-      win_num.value = +random.slice(random.length - 2)
+      let number_random = +random.slice(random.length - 2)
+      if (number_random === 0) {
+        win_num.value = 100
+      } else {
+        win_num.value = number_random
+      }
     })
 
     return {
