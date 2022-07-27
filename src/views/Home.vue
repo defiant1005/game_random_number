@@ -66,25 +66,18 @@ export default defineComponent({
     })
 
     const again_game = () => {
-      let random = Date.now().toString()
-      let number_random = +random.slice(random.length - 2)
-      if (number_random === 0) {
-        win_num.value = 100
-      } else {
-        win_num.value = number_random
-      }
+      win_num.value = getRandomArbitrary();
       choice_num_arr.value = []
       is_end.value = false
     };
 
+    function getRandomArbitrary() {
+      let min = 0;
+      let max = 100;
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
     onMounted(() => {
-      let random = Date.now().toString()
-      let number_random = +random.slice(random.length - 2)
-      if (number_random === 0) {
-        win_num.value = 100
-      } else {
-        win_num.value = number_random
-      }
+      win_num.value = getRandomArbitrary();
     })
 
     return {
